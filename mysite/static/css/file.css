@@ -1,0 +1,23 @@
+body{
+  background-color: #787878;
+  background-image:url(https://a.radikal.ru/a37/1805/76/c13fbee3a413.jpg);
+  font-weight:600;
+  font-style: italic;
+  color: #ffffff;
+  text-align: center;
+}
+p{
+  font-weight:600;
+  font-style: italic;
+  color: #ffffff;
+  text-align: center;
+}
+h1{
+  font-weight:600;
+  font-style: italic;
+  color: #ffffff;
+  text-align: center;
+}
+wrd{
+  margin-left: 900
+}

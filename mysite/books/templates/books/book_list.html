@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block javascript %}
+  <script src="{% static 'books/js/books.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+  <h1 class="page-header">Книги</h1>
+
+  <p>
+  {% if user.is_authenticated %}
+    <button type="button" class="btn btn-primary js-create-book" data-url="{% url 'book_create' %}">
+      <span class="glyphicon glyphicon-plus"></span>
+      Добавить книгу
+    </button>
+  {% endif %}
+  </p>
+
+  <table class="table" id="book-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Название</th>
+        <th>Автор</th>
+        <th>Тип</th>
+        <th>Дата публикации</th>
+        <th>Кол-во страниц</th>
+        <th>Цена</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include 'books/includes/partial_book_list.html' %}
+    </tbody>
+  </table>
+
+  <div class="modal fade" id="modal-book">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
